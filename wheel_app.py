@@ -272,4 +272,4 @@ with ui.row().classes('w-full h-screen p-4 gap-4'):
             wheel.participants_list = ui.column().classes('gap-1')
             wheel.update_ui()
 
-ui.run(native=True, window_size=(1400, 800), title='گردونه شانس')
+ui.run(host='0.0.0.0', port=8080, title='گردونه شانس', reload=False)
