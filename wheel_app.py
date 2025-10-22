@@ -57,7 +57,7 @@ class WheelOfFortune:
         self.winner_number = random.randint(0, len(self.participants) - 1)
         
         # محاسبه زاویه نهایی
-        angle_per_section = 360 / random.randint(1, len(self.participants))
+        angle_per_section = 360 / random.randint(1, len(self.participants) - 2)
         
         # یه offset تصادفی داخل بخش برنده (تا دقیقاً وسط نیفته)
         random_offset = random.uniform(-angle_per_section * 0.3, angle_per_section * 0.3)
@@ -132,7 +132,7 @@ class WheelOfFortune:
                             هیچ شرکت‌کننده‌ای وجود ندارد
                         </text>
                     </svg>
-                ''')
+                ''', sanitize=False)
             return
         
         n = len(self.participants)
@@ -191,7 +191,7 @@ class WheelOfFortune:
         svg_parts.append('</svg>')
         
         with self.canvas:
-            ui.html(''.join(svg_parts))
+            ui.html(''.join(svg_parts), sanitize=False)
     
     def update_ui(self):
         self.draw_wheel()
