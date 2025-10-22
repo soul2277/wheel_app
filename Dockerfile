@@ -1,6 +1,7 @@
 #Dockerfile
 
-FROM zauberzeug/zauberzeug/nicegui:latest
+FROM zauberzeug/nicegui:latest
+
 
 WORKDIR /app
 
