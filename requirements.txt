@@ -1,5 +1,5 @@
 #Libraries
 
-nicegui
-pandas
-openpyxl
+nicegui==1.4.0
+pandas==2.0.3
+openpyxl==3.1.2
