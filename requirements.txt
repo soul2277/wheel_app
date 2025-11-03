@@ -2,4 +2,4 @@
 
 nicegui==3.0.0
 pandas==2.3.3
-openpyxl==3.0.3
+openpyxl==3.1.5
